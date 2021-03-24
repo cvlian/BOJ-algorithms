@@ -32,8 +32,16 @@ class segTree:
 
     def Update(self, p, v):
         p += self.size//2 - 1
+<<<<<<< HEAD
         self.v[p] = v
 
         while p > 1:
             p //= 2
             self.v[p] = self.op(self.v[2*p], self.v[2*p + 1])
+=======
+        self.v[p] += v
+
+        while p > 1:
+            p //= 2
+            self.v[p] = self.op(self.v[2*p] + self.v[2*p + 1])
+>>>>>>> 3920e56a3392f89bdff3824c54a0300f06fcddee
