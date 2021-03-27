@@ -1,16 +1,14 @@
 """
     Segment Tree
 """
+import math
 
 class segTree:
 
     def __init__(self, n, op, initval):
-        self.size = 1
+        self.size = 2**(math.ceil(math.log(n, 2)) + 1)
         self.op = op
         self.init_val = initval
-
-        while n*2 > self.size: 
-            self.size *= 2
 
         self.v = [self.init_val]*self.size
 
