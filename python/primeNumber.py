@@ -1,7 +1,8 @@
 """
     Prime Number
 """
-# Mobius function (in Inclusion–Exclusion Principle)
+
+import random
 
 MAX = 2**18
 m = [0, 1] + [0]*MAX
@@ -126,7 +127,7 @@ def pollard_rho(n, x=2):
 
 def factorize(n):
     r = []
-    
+
     while n > 1 :
         d = pollard_rho(n)
         r.append(d)
