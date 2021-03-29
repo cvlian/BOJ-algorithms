@@ -134,3 +134,20 @@ def factorize(n):
         n //= d
     
     return sorted(r)
+
+# Euler's phi function
+def t(n):
+    if n == 1 :
+        return 0
+
+    for i in range(2, int(n**.5)+1):
+        k = 0
+
+        while n%i == 0 :
+            n //= i
+            k += 1
+        
+        if k > 0 :
+            r = r*(i-1)//i
+
+    return r
