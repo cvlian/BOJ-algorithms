@@ -136,7 +136,7 @@ def factorize(n):
     return sorted(r)
 
 # Euler's phi function
-def t(n):
+def ep(n):
     if n == 1 :
         return 0
 
