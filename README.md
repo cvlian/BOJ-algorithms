@@ -2,9 +2,10 @@
 
 [백준 온라인 저지](https://www.acmicpc.net/)의 문제들을 풀기위해 필요한 유용한 **유틸리티 함수** 및 **클래스**들(**C++**, **JAVA**, 또는 **Python** 기반)을 정리해 놓은 Repository.
 
-<p align="center"><img src="solved.png" width="750" height="400" /></p>
+<p align="center"><img src="solved.png" width="800" height="480" /></p>
 
 ## Current progress
+- 기하
 - 다익스트라
 - 세그먼트 트리(+머지 소트 트리)
 - 소수 판정 (+유클리드 호제법, 뫼비우스 함수, 폴라드 로, 밀러-라빈, 오일러 파이)
@@ -12,7 +13,9 @@
 - Disjoint Set
 
 ## To be continue
+- 2 SAT
 - 강한 연결 요소
+- 게임 이론
 - 기하 (CCW, Convex hull)
 - 그래프 (+단절점&단절선, 연결요소, 오일러회로, Cycle)
 - 냅색 문제
@@ -30,6 +33,7 @@
 - 최소 스패닝 트리
 - 최장증가수열
 - 트리 (최소 공통 조상, 단절점&단절선, 순회)
+- 퍼시스턴트 트리
 - 팰린드롬
 - 펜윅트리
 - 플로이드 외샬
