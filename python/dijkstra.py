@@ -19,7 +19,7 @@ class dijkstra:
         if bi_direct:
             self.adj[v].append((u, w))
 
-    def sol(self, s, e):
+    def sol(self, s):
         heappush(self.hq, (0, s))
         self.D[s] = 0
 
