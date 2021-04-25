@@ -4,22 +4,24 @@
 
 import random
 
-MAX = 2**18
-m = [0, 1] + [0]*MAX
-soe = [0, 0] + [1]*MAX
+def cal_mu(MAX=2**18):
+    m = [0, 1] + [0]*MAX
 
-def cal_mu():
     for i in range(1, MAX+1):
         for j in range(2*i, MAX+1, i):
             m[j] -= m[i]
 
-def cal_eratos():
-    global soe, MAX
+    return m
+
+def cal_eratos(MAX=2**18):
+    soe = [0, 0] + [1]*MAX
 
     for i in range(2, MAX) :
         if soe[i] == 1 :
             for j in range(i*i, MAX, i) :
                 soe[j] = 0
+
+    return soe
 
 def gcd(a, b):
 
@@ -29,6 +31,9 @@ def gcd(a, b):
         b = r
     
     return a
+
+soe = cal_eratos()
+m = cal_mu()
 
 # Mobius function (in Inclusion–Exclusion Principle)
 def mobius(n):
@@ -74,8 +79,8 @@ def miller_rabin(n, a):
 
     return False
 
-def is_prime(n):
-    global soe, MAX
+def is_prime(n, MAX=2**18):
+    global soe
 
     if n < MAX:
         return soe[n] == 1
