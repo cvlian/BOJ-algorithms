@@ -1,5 +1,9 @@
 """
     Union Find
+
+    Note: 
+
+    Type 1. 집합_1717
 """
 
 class UnionFind:
